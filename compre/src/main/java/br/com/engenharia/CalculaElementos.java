@@ -11,8 +11,8 @@ public class CalculaElementos implements ICalculaElementos {
 		d.setX(1.65f);
 		d.setY(2.0f);
 		d.setZ(12.0f);
-		
-		ce.calculaLaje("1", d, 177.5f);
+		ce.setLaje(new Laje());
+		ce.calculaLaje(ce.laje, "1", d, 177.5f);
 		System.out.println("Area de aço = " + ce.getLaje().getAreaDeAco());
 	}
 	
@@ -37,8 +37,8 @@ public class CalculaElementos implements ICalculaElementos {
 	}
 	
 	@Override
-	public float calculaLaje(String tipo, Dimensao d, Float carga) {
-		Laje l = new Laje();
+	public float calculaLaje(Laje l, String tipo, Dimensao d, Float carga) {
+		
 		l.setX(1.65f);
 		l.setY(2.0f);
 		l.setH(12.0f);
