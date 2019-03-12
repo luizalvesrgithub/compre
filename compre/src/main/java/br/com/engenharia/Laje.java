@@ -91,7 +91,7 @@ public class Laje {
 		
 		// Calcular a profundidade da linha neutra = d * bx onde d é a hutil
 		
-		double lx = hutil * bx; // Para verificar se
+		double lx = hutil * bx; // Para verificar se a altura da linha neutra está na mesa
 		setAreaDeAco(ks * this.getMd() / hutil);
 		
 	}
@@ -116,8 +116,8 @@ public class Laje {
 	public void getCalculoMomentosCortanteFletor(Float carga, float vaoviga) {
 		// 181,85
 		setCargaIncidente(carga * this.getAreaDeInfluencia());
-		setmCortante((carga * vaoviga) / 2); // kN.m
-		setmFletor((carga * Math.pow(vaoviga, 2)) / 8); // kN.m
+		setmCortante((getCargaIncidente() * vaoviga) / 2); // kN.m
+		setmFletor((getCargaIncidente() * Math.pow(vaoviga, 2)) / 8); // kN.m
 	}
 	
 	public double getCargaIncidente() {

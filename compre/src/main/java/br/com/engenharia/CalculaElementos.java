@@ -44,7 +44,7 @@ public class CalculaElementos implements ICalculaElementos {
 		l.setH(12.0f);
 		l.setHcoberConcreto(5.0f);
 		l.setHeps(8.0f);
-		l.setAreaDeInfluencia(42);
+		l.setAreaDeInfluencia(0.42f);
 		l.setxInferiorDoEps(30.0f);
 		l.setxSuperiorDoEps(33.0f);
 		l.setxDaVigota(12.0f);
@@ -122,5 +122,7 @@ public class CalculaElementos implements ICalculaElementos {
 	public void setViga(Viga viga) {
 		this.viga = viga;
 	}
+
+	
 	
 }
