@@ -31,11 +31,10 @@ public class Laje {
 	private String tipo;
 	private float x;
 	private float y;
-	
 	private float h;
 	private float heps;
 	
-	private float hcoberConcreto;
+	private float hcoberConcreto; // Altura da mesa
 	
 	private float xSuperiorDoEps;
 	
@@ -92,7 +91,10 @@ public class Laje {
 		// Calcular a profundidade da linha neutra = d * bx onde d é a hutil
 		
 		double lx = hutil * bx; // Para verificar se a altura da linha neutra está na mesa
-		setAreaDeAco(ks * this.getMd() / hutil);
+		if (lx < getHcoberConcreto())
+			setAreaDeAco(ks * this.getMd() / hutil);
+		else
+			System.out.println("Aumente a altura da viga. Esta altura direcionará o cálculo para o domínio 3.");
 		
 	}
 	

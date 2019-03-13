@@ -9,8 +9,8 @@ public class CalculaElementos implements ICalculaElementos {
 		
 		Dimensao d = new Dimensao();
 		d.setX(1.65f);
-		d.setY(2.0f);
-		d.setZ(12.0f);
+		d.setY(20.0f);
+		d.setZ(10.0f);
 		ce.setLaje(new Laje());
 		ce.calculaLaje(ce.laje, "1", d, 177.5f);
 		System.out.println("Area de aço = " + ce.getLaje().getAreaDeAco());
@@ -41,7 +41,7 @@ public class CalculaElementos implements ICalculaElementos {
 		
 		l.setX(1.65f);
 		l.setY(2.0f);
-		l.setH(12.0f);
+		l.setH(30.0f);
 		l.setHcoberConcreto(5.0f);
 		l.setHeps(8.0f);
 		l.setAreaDeInfluencia(0.42f);
@@ -122,7 +122,5 @@ public class CalculaElementos implements ICalculaElementos {
 	public void setViga(Viga viga) {
 		this.viga = viga;
 	}
-
-	
 	
 }
